@@ -60,6 +60,7 @@ function setButton(a){
            
 
     @using (Html.BeginForm("Submit", "Users", FormMethod.Post)) {
+        
         @if (await UserManager.IsInRoleAsync(UserManager.FindByNameAsync(UserManager.GetUserName(User)).Result, "Admin")) {
             <p class="font-weight-bold">Admin panel</p>
             <input type="submit" class="btn btn-danger" value="Delete"onclick="setButton('delete')"  />
@@ -115,6 +116,7 @@ function setButton(a){
         <input type="hidden" id="button" name="button" />
         <input type="hidden" id="currentUser" name="currentUser" />
     }
+    
 }
 else
 {

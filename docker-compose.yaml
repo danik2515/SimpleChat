@@ -1,0 +1,31 @@
+﻿version: "3.9"
+
+services:
+
+
+  #SQLexpress_db:
+  #  command: ["sqlcmd","-S","10.3.2.4","-U","SA","-P","123","--accept-eula"]
+  #  image: mcr.microsoft.com/mssql/server:2019-latest
+  #  restart: always
+  #  ports:
+  #    - "5432:5432"
+  postgres_db:
+    image: postgres:14.0-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=Danik
+      - POSTGRES_PASSWORD=polgaden12398
+      - POSTGRES_DB=postsqlbd
+    ports:
+      - "5432:5432"
+
+  webapp:
+    restart: always
+    depends_on: 
+      - postgres_db
+    build:
+      context: ./
+    command: dotnet watch --project ./app run --urls "http://0.0.0.0:5001"
+    ports:
+      - "5001:5001"
+  

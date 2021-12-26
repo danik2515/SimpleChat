@@ -23,8 +23,8 @@ namespace WebApp {
         
         public void ConfigureServices(IServiceCollection services) {
             services.AddDbContext<ApplicationContext>(options =>
-                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            
             services.Configure<IdentityOptions>(options => {
                 options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 1;

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zKwU2uDQHbDqI9Buu7fykshBAeoSB/vfV4XYxu5QqM6/nxBEe5PxDuU8GvE2SUvVQKf+pR9GZkVPJUNjBOVbwA==",
+  "dgSpecHash": "JJpX9/CAU2l+GuTRWnrlha5yonXl7y+R4DLqGkkD1UzB7JLF9k84VdUjv02wEStowtv25KG6ZjclbC5BB+LL+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\1111\\source\\repos\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
@@ -63,6 +63,8 @@
     "C:\\Users\\1111\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\1111\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\1111\\.nuget\\packages\\npgsql\\5.0.10\\npgsql.5.0.10.nupkg.sha512",
+    "C:\\Users\\1111\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.10\\npgsql.entityframeworkcore.postgresql.5.0.10.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",

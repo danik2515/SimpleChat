@@ -155,3 +155,5 @@ C:\Users\1111\source\repos\WebApp\bin\Debug\net5.0\appsettings.json
 C:\Users\1111\source\repos\WebApp\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\1111\source\repos\WebApp\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\1111\source\repos\WebApp\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\1111\source\repos\WebApp\bin\Debug\net5.0\Npgsql.dll
+C:\Users\1111\source\repos\WebApp\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
