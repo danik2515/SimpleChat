@@ -155,3 +155,5 @@ C:\Users\1111\source\repos\WebApp\obj\Release\net5.0\WebApp.dll
 C:\Users\1111\source\repos\WebApp\obj\Release\net5.0\ref\WebApp.dll
 C:\Users\1111\source\repos\WebApp\obj\Release\net5.0\WebApp.pdb
 C:\Users\1111\source\repos\WebApp\obj\Release\net5.0\WebApp.genruntimeconfig.cache
+C:\Users\1111\source\repos\WebApp\bin\Release\net5.0\Npgsql.dll
+C:\Users\1111\source\repos\WebApp\bin\Release\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

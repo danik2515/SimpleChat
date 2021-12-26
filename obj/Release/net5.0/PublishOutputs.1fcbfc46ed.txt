@@ -76,6 +76,8 @@ C:\Users\1111\source\repos\WebApp\obj\Docker\publish\Microsoft.VisualStudio.Web.
 C:\Users\1111\source\repos\WebApp\obj\Docker\publish\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\1111\source\repos\WebApp\obj\Docker\publish\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\1111\source\repos\WebApp\obj\Docker\publish\Newtonsoft.Json.dll
+C:\Users\1111\source\repos\WebApp\obj\Docker\publish\Npgsql.dll
+C:\Users\1111\source\repos\WebApp\obj\Docker\publish\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\1111\source\repos\WebApp\obj\Docker\publish\System.Composition.AttributedModel.dll
 C:\Users\1111\source\repos\WebApp\obj\Docker\publish\System.Composition.Convention.dll
 C:\Users\1111\source\repos\WebApp\obj\Docker\publish\System.Composition.Hosting.dll
