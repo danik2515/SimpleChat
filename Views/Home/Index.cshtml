@@ -1,0 +1,124 @@
+﻿
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using Microsoft.AspNetCore.Identity
+@using WebApp.Models
+@model UsersModel
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+
+<script>
+function check()
+{
+ var check=document.getElementsByTagName('input');
+ for(var i=0;i<check.length;i++)
+ {
+  if(check[i].type=='checkbox')
+  {
+   check[i].checked=true;
+  }
+ }
+}
+
+function uncheck()
+{
+ var uncheck=document.getElementsByTagName('input');
+ for(var i=0;i<uncheck.length;i++)
+ {
+  if(uncheck[i].type=='checkbox')
+  {
+   uncheck[i].checked=false;
+  }
+ }
+}
+
+function checkFluency(){
+   var checkbox=document.getElementById('fluency');
+   
+   if(checkbox.checked==true)
+  {
+    check();
+  }else{
+      uncheck();
+  }
+ 
+}
+function setButton(a){
+    document.getElementById('button').value=a;
+    document.getElementById('currentUser').value='@UserManager.GetUserName(User)';
+    
+}
+
+</script>
+
+@if (SignInManager.IsSignedIn(User))
+{
+   
+           
+
+    @using (Html.BeginForm("Submit", "Users", FormMethod.Post)) {
+        @if (await UserManager.IsInRoleAsync(UserManager.FindByNameAsync(UserManager.GetUserName(User)).Result, "Admin")) {
+            <p class="font-weight-bold">Admin panel</p>
+            <input type="submit" class="btn btn-danger" value="Delete"onclick="setButton('delete')"  />
+            <input type="submit" class="btn btn-warning" value="Block"onclick="setButton('block')"  />
+            <input type="submit" class="btn btn-success" value="Unblock"onclick="setButton('unblock')"  />
+            <label><select name="privilege" id="privilege">
+                @for (int i = 0; i < Model.RoleList.Count; i++){
+                    <option value="@Model.RoleList[i]" >@Model.RoleList[i]</option>
+                }
+            </select></label>
+            <button type="submit" class="btn btn-secondary"onclick="setButton('deleteRight')">Delete right</button>
+            <button type="submit" class="btn btn-info"onclick="setButton('giveRight')">Give right</button>
+            <br />
+        }
+        <input type="submit" class="btn btn-primary" value="Send message"onclick="setButton('sendMessage')"  />
+        <label>Message <input type="text" id="message" name="message"></label>
+        <ul>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">all/nothing <input type="checkbox" onclick="checkFluency()" id="fluency" unchecked /></th>
+                        <th scope="col">ID</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Registration date</th>
+                        <th scope="col">Login date</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @for (int i = 0; i < Model.UserList.Count; i++) {
+                        <tr>
+                            <td>@Html.CheckBoxFor(m=>m.UserList[i].IsChecked)</td>
+                            <th scope="row">@Model.UserList[i].User.Id</th>
+                            <td>@Model.UserList[i].User.UserName</td>
+                            <td>@Model.UserList[i].User.Email</td>
+                            <td>@Model.UserList[i].User.DataTimeRegistration</td>
+                            <td>@Model.UserList[i].User.DataTimeLogin</td>
+                            @if(@Model.UserList[i].User.IsBlocked){
+                                <td><font color="FF0000">Blocked</font></td>
+                            }else{
+                                <td><font color="0BC70E">Normal</font></td>
+                            }
+                        </tr>
+                        @Html.HiddenFor(m => m.UserList[i].User.UserName);
+                    }
+
+
+                </tbody>
+            </table>
+        </ul>
+        <input type="hidden" id="button" name="button" />
+        <input type="hidden" id="currentUser" name="currentUser" />
+    }
+}
+else
+{
+    <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+}

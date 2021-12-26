@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Messages";
+}
+@using Microsoft.AspNetCore.Identity
+@using WebApp.Models
+@inject UserManager<User> UserManager
+<form>
+<h1>@ViewData["Title"]</h1>
+
+    @foreach(string message in UserManager.FindByNameAsync(UserManager.GetUserName(User)).Result.Messeges.Split('\n')) {
+
+            <p class="text-start">@message</p><br />
+            
+        }
+    
+</form>
